@@ -1,0 +1,18 @@
+{
+  "name": "freaky-cli",
+  "version": "1.0.0",
+  "description": "A command line interface for freaky.team",
+  "main": "src/freaky.js",
+  "bin": {
+    "freaky": "./dist/freaky"
+  },
+  "scripts": {
+    "build": "npm run prepare-cli",
+    "prepare-cli": "copy src\\freaky.js dist\\freaky && echo #!/usr/bin/env node | type dist\\freaky > temp && move /Y temp dist\\freaky",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "commander": "^12.1.0"
+  }
+}
